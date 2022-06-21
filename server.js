@@ -7,7 +7,7 @@ require('dotenv').config()
 let db,
     correct,
     dbName = 'QOTD',
-    dbConnectionStr = process.env.DB_String
+    dbConnectionStr = "mongodb+srv://PathAqotd:PathaQOTD@cluster0.w0g9f8b.mongodb.net/?retryWrites=true&w=majority"
     
 
 MongoClient.connect(dbConnectionStr, {useUnifiedTopology: true})
@@ -50,4 +50,6 @@ app.get('/', (req, res)=>{
     })
 })
 
-app.listen(process.env.PORT || PORT , ()=> {console.log(`Listening on port:${PORT}`)})
+app.listen(process.env.PORT || PORT , ()=> {
+    console.log(`Listening on port:${PORT}`)
+})
