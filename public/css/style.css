@@ -69,11 +69,10 @@ label{
     box-shadow: 0 0 4px black;
 }
 .slideWrapper{
-    position: absolute;
+    position: fixed;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 1;
-    display: none;
     justify-content: center;
 }
 .slideWrapper:hover{
