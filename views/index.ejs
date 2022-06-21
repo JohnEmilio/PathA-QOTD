@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Pathologist assistant question of the day. Created by PathNads. Features a new question of the day from a large database of pathology related questions.">
+    <meta name="keywords" content="Pathology, Pathologist Assistant, PathA, medical, pathophysiology">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet"> 
+    <link rel="shortcut icon" href="../assests/scalpel.png" type="image/x-icon">
+    <title>PathA Question of the Day! | PathNads</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="https://pathnads.netlify.app" target="_blank">PathNads</a>
+            <a href="https://etsy.com/shop/pathnads" target="_blank">Etsy</a>
+        </nav>
+    </header>
+    <div class="container">
+        <main>
+            <h1>
+                Your PathA question of the day!
+            </h1>
+            <section class="question">
+                <form>
+                    <p class="questionArea"><%= question %></p>
+                    <% answers.forEach((item, ind) =>{ %>
+                    <div>
+                        <input class="answers" type="radio" name="qotdAnswer" id=answer<%= ind %>>
+                        <label for=answer<%= ind %>><%= item["answer"] %></label>
+                    </div>
+                    <% }) %>
+                    
+                    <button class="inputBtn" type="button">Check Your Answer</button>
+                    
+                </form>
+                <div id="correct" hidden><%= correct %></div>
+                <div class="slideWrapper">
+                    <span class="wrapperExit">X</span>
+                    <div class="answerResp">
+                        <p></p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    <script type="text/javascript" src="../js/main.js"></script>   
+</body>
+</html>

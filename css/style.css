@@ -1,0 +1,117 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 400;
+    background-color: #D6E0EA;
+    /* color: #9A9A9A; */
+    margin: 0;
+    overflow-x: hidden;
+}
+header{
+    display: block;
+}
+nav{
+    width: 95%;
+    margin: 1rem auto;
+    text-align: end;
+}
+a{
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding-right: 1rem;
+}
+nav a:hover{
+    color: #9A9A9A;
+}
+a:visited{
+    color: inherit;
+}
+
+.container{
+    width: 75%;
+    margin: auto;
+}
+h1{
+    font-size: 6rem;
+}
+.question,
+h1{
+    text-align: center;
+}
+.questionArea{
+    font-size: 3.5rem;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    line-height: 4rem;
+}
+label{
+    font-size: 3rem;
+}
+.inputBtn{
+    width: auto;
+    font-size: 2rem;
+    margin: auto;
+    padding: 1rem 2rem;
+    border: 1px solid black;
+    box-shadow: inset 0 0 2px black;
+    border-radius: 3px;
+    background-color: #aaa;
+}
+.inputBtn:hover{
+    transform: scaleX(1.05) scaleY(1.05);
+    transition: 50ms ease-in-out;
+    box-shadow: 0 0 4px black;
+}
+.slideWrapper{
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    display: none;
+    justify-content: center;
+}
+.slideWrapper:hover{
+    cursor: pointer;
+}
+.answerResp{
+    background-color: white;
+    translate: 0 -75vh;
+    display: block;
+    width: auto;
+    padding: 0 2.5rem;
+    text-align: center;
+    font-size: 3rem;
+    align-self: center;
+}
+.wrapperExit{
+    position: absolute;
+    right: 4rem;
+    top: 2rem;
+    font-size: 6rem;
+    color: white;
+    font-weight: 400;
+}
+.answerAnimation{
+    position: absolute;
+    transition: 1s ease-in ;
+    transform: translateY(75vh)
+}
+
+@media screen and (max-width: 900px){
+    .container{
+        width: 90%;
+    }
+    .questionArea,
+    .answerResp,
+    label{
+        font-size: 2.5rem;
+    }
+    h1{
+        font-size: 5rem;
+    }
+}
