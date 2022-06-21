@@ -49,19 +49,5 @@ app.get('/', (req, res)=>{
         res.render('index.ejs', {question, answers, correct})
     })
 })
-app.get('/', (req,res) =>{
-    res.send(JSON(correct))
-})
-
-module.exports.getCorrect = function(){
-    return correct
-}
-
-app.get('/css/style.css', (req, res) =>{
-    res.sendFile(__dirname + '/css/style.css')
-})
-app.get('/js/main.js', (req,res) =>{
-    res.sendFile(__dirname + '/js/main.js')
-})
 
 app.listen(process.env.PORT || PORT , ()=> {console.log(`Listening on port:${PORT}`)})
