@@ -82,13 +82,12 @@ label{
 }
 .answerResp{
     background-color: white;
-    translate: 0 -75vh;
-    display: block;
+    position: absolute;
+    top: -20vh;
     width: auto;
     padding: 0 2.5rem;
     text-align: center;
     font-size: 3rem;
-    align-self: center;
 }
 .wrapperExit{
     position: absolute;
@@ -101,7 +100,7 @@ label{
 .answerAnimation{
     position: absolute;
     transition: 1s ease-in ;
-    transform: translateY(75vh)
+    transform: translateY(70vh)
 }
 
 @media screen and (max-width: 900px){
