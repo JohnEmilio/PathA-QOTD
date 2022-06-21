@@ -30,7 +30,6 @@ function checkAnswer(e){
                     answerResp.classList.add('answerAnimation')
                 }, 0)
                 
-    
                 answerWrapper.addEventListener('click', ()=>{
                     answerWrapper.style.display = 'none'
                     answerResp.classList.remove('answerAnimation')
