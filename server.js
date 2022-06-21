@@ -7,7 +7,7 @@ require('dotenv').config()
 let db,
     correct,
     dbName = 'QOTD',
-    dbConnectionStr = "mongodb+srv://PathAqotd:PathaQOTD@cluster0.w0g9f8b.mongodb.net/?retryWrites=true&w=majority"
+    dbConnectionStr = process.env.DB_String
     
 
 MongoClient.connect(dbConnectionStr, {useUnifiedTopology: true})
